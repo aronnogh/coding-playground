@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "title": "Sum of Two Numbers",
+    "description": "## Problem Statement\n\nGiven two integers **a** and **b**, return their sum.\n\n### Mathematical Formula\n\nThe sum of two numbers can be represented as:\n\n$$result = a + b$$\n\n### Constraints\n\n- $-10^9 \\leq a, b \\leq 10^9$\n- The result will fit in a 32-bit integer\n\n### Notes\n\n> This is a basic arithmetic problem to get you started with the platform.",
+    "functionSignature": "def solve(a, b):",
+    "testCases": [
+      { "input": "2 3", "expected": "5" },
+      { "input": "10 20", "expected": "30" },
+      { "input": "7 8", "expected": "15" },
+      { "input": "100 200", "expected": "300" },
+      { "input": "-5 15", "expected": "10" },
+      { "input": "0 0", "expected": "0" }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Factorial",
+    "description": "## Problem Statement\n\nCalculate the **factorial** of a given number *n*.\n\n### Definition\n\nThe factorial of a non-negative integer $n$, denoted by $n!$, is the product of all positive integers less than or equal to $n$.\n\n$$n! = \\prod_{i=1}^{n} i = 1 \\times 2 \\times 3 \\times \\ldots \\times n$$\n\n### Special Cases\n\n- $0! = 1$ (by definition)\n- $1! = 1$\n\n### Examples\n\n| Input | Output | Calculation |\n|-------|--------|-------------|\n| 5 | 120 | $5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120$ |\n| 0 | 1 | $0! = 1$ (special case) |\n| 3 | 6 | $3! = 3 \\times 2 \\times 1 = 6$ |\n\n### Constraints\n\n- $0 \\leq n \\leq 20$",
+    "functionSignature": "def solve(n):",
+    "testCases": [
+      { "input": "5", "expected": "120" },
+      { "input": "0", "expected": "1" },
+      { "input": "3", "expected": "6" },
+      { "input": "4", "expected": "24" },
+      { "input": "1", "expected": "1" },
+      { "input": "6", "expected": "720" }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Palindrome Check",
+    "description": "## Problem Statement\n\nDetermine if a given string is a **palindrome**.\n\n### Definition\n\nA palindrome is a word, phrase, number, or other sequence of characters that reads the same *forward* and *backward*.\n\n### Algorithm\n\nFor a string $s$ of length $n$, it's a palindrome if:\n\n$$s[i] = s[n-1-i] \\text{ for all } 0 \\leq i < \\frac{n}{2}$$\n\n### Examples\n\n- ✅ `\"racecar\"` → palindrome\n- ❌ `\"hello\"` → not a palindrome\n- ✅ `\"level\"` → palindrome\n\n### Implementation Notes\n\n1. Compare characters from both ends moving inward\n2. Return `\"true\"` if palindrome, `\"false\"` otherwise\n3. Case-sensitive comparison\n\n> **Tip**: You can use string slicing `s[::-1]` in Python to reverse a string.",
+    "functionSignature": "def solve(s):",
+    "testCases": [
+      { "input": "racecar", "expected": "true" },
+      { "input": "hello", "expected": "false" },
+      { "input": "level", "expected": "true" },
+      { "input": "python", "expected": "false" },
+      { "input": "a", "expected": "true" },
+      { "input": "abcba", "expected": "true" }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Maximum Element",
+    "description": "## Problem Statement\n\nFind the **maximum element** in a list of integers.\n\n### Mathematical Definition\n\nGiven an array $A = [a_1, a_2, \\ldots, a_n]$, find:\n\n$$\\max(A) = \\max\\{a_1, a_2, \\ldots, a_n\\}$$\n\n### Algorithm Approaches\n\n#### Linear Scan (Recommended)\n```python\ndef find_max(arr):\n    max_val = arr[0]\n    for num in arr[1:]:\n        if num > max_val:\n            max_val = num\n    return max_val\n```\n\n#### Time Complexity\n- **Time**: $O(n)$ where $n$ is the length of the array\n- **Space**: $O(1)$ constant space\n\n### Edge Cases\n\n- Single element array\n- All negative numbers\n- Array with duplicates\n\n### Constraints\n\n- $1 \\leq |numbers| \\leq 10^5$\n- $-10^9 \\leq numbers[i] \\leq 10^9$",
+    "functionSignature": "def solve(numbers):",
+    "testCases": [
+      { "input": "[1, 5, 3, 9, 2]", "expected": "9" },
+      { "input": "[-10, -5, -20]", "expected": "-5" },
+      { "input": "[42]", "expected": "42" },
+      { "input": "[100, 200, 50]", "expected": "200" },
+      { "input": "[0, -1, -5, 10]", "expected": "10" },
+      { "input": "[-100, -200, -50]", "expected": "-50" }
+    ]
+  }
+]
